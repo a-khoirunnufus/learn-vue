@@ -1,4 +1,5 @@
 # learn-vue
+working with option api, vue-router and consume api.
 
 ## Project setup
 ```
