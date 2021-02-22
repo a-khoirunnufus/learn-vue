@@ -12,6 +12,21 @@ export default {
   name: 'App',
   components: {
     Footer
+  },
+  data() {
+    return {
+      articles: [],
+      authors: []
+    }
+  },
+  mounted() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(res => res.json())
+      .then(json => {
+        this.articles = json
+        // console.log('4th articles title:',this.articles[3].title)
+      })
+      .catch(err => console.error(err))
   }
 }
 </script>
